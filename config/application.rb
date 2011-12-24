@@ -44,5 +44,12 @@ module FirstApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Enable Exception Notifier    
+    config.middleware.use ExceptionNotifier,
+      :email_prefix => "[Exception] ",
+      :sender_address => %{"Exception Notifier" <JazzcatCB@gmail.com>},
+      :exception_recipients => %w{JazzcatCB@gmail.com}
+    
   end
 end
