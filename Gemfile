@@ -7,6 +7,10 @@ gem 'rails', '3.1.1'
 
 # gem 'sqlite3', '1.3.4'
 
+group :development, :test do
+	gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
 gem 'exception_notification', :require => 'exception_notifier'
 
 # Gems used only for assets and not required
