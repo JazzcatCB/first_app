@@ -57,4 +57,12 @@ FirstApp::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Enable Exception Notifier    
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[Exception] ",
+    :sender_address => %{"Exception Notifier" <JazzcatCB@gmail.com>},
+    :exception_recipients => %w{JazzcatCB@gmail.com}
+    
+  
 end
