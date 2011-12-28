@@ -7,6 +7,10 @@ gem 'rails', '3.1.1'
 
 # gem 'sqlite3', '1.3.4'
 
+group :production, :staging do
+  gem "pg"
+end
+
 group :development, :test do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
 end
